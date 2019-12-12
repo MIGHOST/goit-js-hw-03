@@ -45,6 +45,9 @@ createTransaction  (id, type, amount)  {
       this.createTransaction("id-1",Transaction.DEPOSIT, amount)
       this.balance += amount;
       this.transactions.push(this.createTransaction("id-1",Transaction.DEPOSIT, amount)); 
+
+      return this.createTransaction("id-1",Transaction.DEPOSIT, amount)
+    
   },
   /*
    * Метод отвечающий за снятие суммы с баланса.
@@ -102,15 +105,15 @@ createTransaction  (id, type, amount)  {
 
 
 account.deposit(1500);
-account.withdraw(2250);
-account.deposit(2250);
-account.withdraw(1250);
+// account.withdraw(2250);
+// account.deposit(2250);
+// account.withdraw(1250);
 
 
 // 
 console.log(account.balance);
 console.log(account.transactions)
-console.log(account.getTransactionDetails("id-2"));
-console.log(account.getTransactionTotal(Transaction.DEPOSIT))
+// console.log(account.getTransactionDetails("id-2"));
+// console.log(account.getTransactionTotal(Transaction.DEPOSIT))
 
 

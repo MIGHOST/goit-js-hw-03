@@ -3,10 +3,21 @@
 
 //Task-3
 
+// const findBestEmployee = employees => {
+//   let maxTasks = 0;
+//   const keys = Object.keys(employees);
+//   for (let key of keys) {
+//     if (maxTasks < employees[key]) {
+//       maxTasks = employees[key];
+//       name = key;
+//     }
+//   }
+//   return (`The best employer is ${name}, task completed - ${maxTasks}!`);
+// }
+
 const findBestEmployee = employees => {
   let maxTasks = 0;
-  const keys = Object.keys(employees);
-  for (let key of keys) {
+  for (let key in employees) {
     if (maxTasks < employees[key]) {
       maxTasks = employees[key];
       name = key;

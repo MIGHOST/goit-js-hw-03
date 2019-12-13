@@ -2,10 +2,10 @@
 
 //Task-4
 const countTotalSalary = employees => {
-  let keys = Object.values(employees);
+  // let keys = Object.values(employees);
   let total = 0;
-  for (let key of keys) {
-    total += key;
+  for (let key in employees) {
+    total += employees[key];
   }
   return total;
 }
